@@ -1,0 +1,530 @@
+Index: src/ClassObject/Student.java
+===================================================================
+diff --git a/src/ClassObject/Student.java b/src/ClassObject/Student.java
+deleted file mode 100644
+--- a/src/ClassObject/Student.java	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
++++ /dev/null	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
+@@ -1,24 +0,0 @@
+-package ClassObject;
+-
+-public class Student {
+-    int studentRegd;
+-    String studentName;
+-    String studentCity;
+-
+-    public void StudentDetails(){
+-        System.out.println("Student Name is "+studentName);
+-        System.out.println("Student Regd is "+studentRegd);
+-        System.out.println("He belong  to "+studentCity);
+-    }
+-}
+-class Demo{
+-    public static void main(String[] args) {
+-        Student  student=new Student();
+-        student.studentRegd=964;
+-        student.studentName="Akshay";
+-        student.studentCity="Patna";
+-
+-
+-        student.StudentDetails();
+-    }
+-}
+Index: src/Construcctor/Constructor.java
+===================================================================
+diff --git a/src/Construcctor/Constructor.java b/src/Construcctor/Constructor.java
+deleted file mode 100644
+--- a/src/Construcctor/Constructor.java	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
++++ /dev/null	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
+@@ -1,17 +0,0 @@
+-package Construcctor;
+-
+-
+-
+-public class Constructor {
+-    public Constructor (){
+-        System.out.println("Constructor");
+-    }
+-
+-    public  Constructor(int srt){
+-        System.out.println("Parameterized constructor");
+-    }
+-
+-    public static void main(String[] args) {
+-        Constructor constructor=new Constructor(6);
+-    }
+-}
+Index: src/Construcctor/MethodOverloading.java
+===================================================================
+diff --git a/src/Construcctor/MethodOverloading.java b/src/Construcctor/MethodOverloading.java
+deleted file mode 100644
+--- a/src/Construcctor/MethodOverloading.java	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
++++ /dev/null	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
+@@ -1,15 +0,0 @@
+-package Construcctor;
+-
+-public class MethodOverloading {
+-    public void Student(){
+-        System.out.println("Student ");
+-    }
+-    public  void Student(int str){
+-        System.out.println("String");
+-    }
+-
+-    public static void main(String[] args) {
+-        MethodOverloading overloading =new MethodOverloading();
+-
+-    }
+-}
+Index: src/Abstraction/Start.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Abstraction/Start.java b/src/Abstraction/Start.java
+new file mode 100644
+--- /dev/null	(date 1714677495500)
++++ b/src/Abstraction/Start.java	(date 1714677495500)
+@@ -0,0 +1,18 @@
++package Abstraction;
++
++public class Start {
++    public static void main(String[] args) {
++        Mychild mychild=new Mychild();
++        mychild.cal();
++        mychild.lunchRocket();
++
++
++        System.out.println();
++
++
++        MyClass aClass=new Mychild();
++        aClass.cal();
++        aClass.lunchRocket();
++    }
++
++}
+Index: src/Inheritance/Animal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Inheritance;\r\n\r\npublic class Animal {\r\n    String Color=\"Blue\";\r\n\r\n    public static  int x=4;\r\n\r\n    public void eating(){\r\n        System.out.println(\"Animal is eating...\");\r\n        System.out.println(this.x);\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Inheritance/Animal.java b/src/Inheritance/Animal.java
+--- a/src/Inheritance/Animal.java	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
++++ b/src/Inheritance/Animal.java	(date 1714674432259)
+@@ -3,11 +3,9 @@
+ public class Animal {
+     String Color="Blue";
+ 
+-    public static  int x=4;
++    int x=4;
+ 
+     public void eating(){
+         System.out.println("Animal is eating...");
+-        System.out.println(this.x);
+-
+     }
+ }
+Index: src/Abstraction/MyClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Abstraction/MyClass.java b/src/Abstraction/MyClass.java
+new file mode 100644
+--- /dev/null	(date 1714677429440)
++++ b/src/Abstraction/MyClass.java	(date 1714677429440)
+@@ -0,0 +1,19 @@
++package Abstraction;
++
++abstract public class MyClass {
++
++    //Complete Method
++
++    public void cal(){
++        System.out.println("Calcutaing result..");
++    }
++
++    //abstraction Method
++
++    abstract public void lunchRocket();
++    //abstract class can not be Instantiated
++
++    //does not create object
++}
++
++
+Index: src/Abstraction/Mychild.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Abstraction/Mychild.java b/src/Abstraction/Mychild.java
+new file mode 100644
+--- /dev/null	(date 1714677429435)
++++ b/src/Abstraction/Mychild.java	(date 1714677429435)
+@@ -0,0 +1,8 @@
++package Abstraction;
++
++public  class Mychild extends MyClass{
++    @Override
++    public void lunchRocket() {
++        System.out.println("My child class is going to lunch rockrt from NASA");
++    }
++}
+Index: src/Interfaces/Demo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Interfaces/Demo.java b/src/Interfaces/Demo.java
+new file mode 100644
+--- /dev/null	(date 1714678192682)
++++ b/src/Interfaces/Demo.java	(date 1714678192682)
+@@ -0,0 +1,8 @@
++package Interfaces;
++
++public class Demo {
++    public static void main(String[] args) {
++        Shape shape=new Circle();
++        shape.calculated(8);
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"627567a4-3d3e-4691-bf8f-a80b3d183efe\" name=\"Changes\" comment=\"day02\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Inheritance/Animal.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Inheritance/Animal.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {}\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/AkshayPrajaCode/Object-Oriented-Programming.git\",\r\n    \"accountId\": \"283ac711-c82b-4930-95bc-a2d69244b6e8\"\r\n  },\r\n  \"recentNewPullRequestHead\": {\r\n    \"server\": {\r\n      \"useHttp\": false,\r\n      \"host\": \"github.com\",\r\n      \"port\": null,\r\n      \"suffix\": null\r\n    },\r\n    \"owner\": \"AkshayPrajaCode\",\r\n    \"repository\": \"Object-Oriented-Programming\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fsMTDxMpqS4wDMceA3lFxyULzn\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.Constructor.executor\": \"Run\",\r\n    \"Application.Demo.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"day-02\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"onboarding.tips.debug.path\": \"D:/Code/Object Oriented Programming/src/Main.java\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Demo\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Inheritance.Demo\" />\r\n      <module name=\"Object Oriented Programming\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Inheritance.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Demo\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"627567a4-3d3e-4691-bf8f-a80b3d183efe\" name=\"Changes\" comment=\"\" />\r\n      <created>1714585340457</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714585340457</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714587160055</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714587160055</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714587800554</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714587800554</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714587817704</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714587817704</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"day02\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714673083472</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714673083472</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"day02\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714673548677</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714673548677</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"day02\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714673924849</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714673924849</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"day02\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714673937093</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714673937093</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Paths\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"file:$PROJECT_DIR$/Object Oriented Programming.iml\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"structure\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"file:$PROJECT_DIR$/Object Oriented Programming.iml\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"git\" />\r\n    <MESSAGE value=\"day02\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"day02\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
++++ b/.idea/workspace.xml	(date 1714739056846)
+@@ -6,7 +6,6 @@
+   <component name="ChangeListManager">
+     <list default="true" id="627567a4-3d3e-4691-bf8f-a80b3d183efe" name="Changes" comment="day02">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Inheritance/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inheritance/Animal.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -16,6 +15,7 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Interface" />
+         <option value="Class" />
+       </list>
+     </option>
+@@ -23,30 +23,41 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="day-02" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {}
+-}]]></component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/AkshayPrajaCode/Object-Oriented-Programming.git",
+-    "accountId": "283ac711-c82b-4930-95bc-a2d69244b6e8"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {}
++}</component>
++  <component name="GitHubPullRequestState">{
++  &quot;prStates&quot;: [
++    {
++      &quot;id&quot;: {
++        &quot;id&quot;: &quot;PR_kwDOL1rnSs5uZSSp&quot;,
++        &quot;number&quot;: 2
++      },
++      &quot;lastSeen&quot;: 1714678733098
++    }
++  ]
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/AkshayPrajaCode/Object-Oriented-Programming.git&quot;,
++    &quot;accountId&quot;: &quot;283ac711-c82b-4930-95bc-a2d69244b6e8&quot;
+   },
+-  "recentNewPullRequestHead": {
+-    "server": {
+-      "useHttp": false,
+-      "host": "github.com",
+-      "port": null,
+-      "suffix": null
++  &quot;recentNewPullRequestHead&quot;: {
++    &quot;server&quot;: {
++      &quot;useHttp&quot;: false,
++      &quot;host&quot;: &quot;github.com&quot;,
++      &quot;port&quot;: null,
++      &quot;suffix&quot;: null
+     },
+-    "owner": "AkshayPrajaCode",
+-    "repository": "Object-Oriented-Programming"
++    &quot;owner&quot;: &quot;AkshayPrajaCode&quot;,
++    &quot;repository&quot;: &quot;Object-Oriented-Programming&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 3
+ }</component>
+@@ -60,19 +71,48 @@
+   "keyToString": {
+     "Application.Constructor.executor": "Run",
+     "Application.Demo.executor": "Run",
++    "Application.Interfaces.Demo.executor": "Run",
++    "Application.Main.executor": "Run",
++    "Application.Start.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "day-02",
++    "git-widget-placeholder": "day-03",
+     "kotlin-language-version-configured": "true",
+     "onboarding.tips.debug.path": "D:/Code/Object Oriented Programming/src/Main.java"
+   }
+ }]]></component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Application.Interfaces.Demo">
+     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Inheritance.Demo" />
+       <module name="Object Oriented Programming" />
+       <extension name="coverage">
+         <pattern>
+           <option name="PATTERN" value="Inheritance.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Interfaces.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Interfaces.Demo" />
++      <module name="Object Oriented Programming" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="Interfaces.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Abstraction.Start" />
++      <module name="Object Oriented Programming" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="Abstraction.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -82,6 +122,8 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.Interfaces.Demo" />
++        <item itemvalue="Application.Start" />
+         <item itemvalue="Application.Demo" />
+       </list>
+     </recent_temporary>
+@@ -151,10 +193,31 @@
+       <option name="project" value="LOCAL" />
+       <updated>1714673937093</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="day02">
++      <option name="closed" value="true" />
++      <created>1714674034387</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1714674034387</updated>
++    </task>
++    <task id="LOCAL-00009" summary="day02">
++      <option name="closed" value="true" />
++      <created>1714678523174</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1714678523174</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
++    <option name="OPEN_GENERIC_TABS">
++      <map>
++        <entry key="2bd3f378-448f-41b1-a9c5-b98c515650d8" value="TOOL_WINDOW" />
++      </map>
++    </option>
+     <option name="RECENT_FILTERS">
+       <map>
+         <entry key="Paths">
+@@ -172,6 +235,30 @@
+     </option>
+     <option name="TAB_STATES">
+       <map>
++        <entry key="2bd3f378-448f-41b1-a9c5-b98c515650d8">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="range">
++                    <value>
++                      <list>
++                        <option value="origin/master..origin/day-02" />
++                      </list>
++                    </value>
++                  </entry>
++                  <entry key="roots">
++                    <value>
++                      <list>
++                        <option value="$PROJECT_DIR$" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
+         <entry key="MAIN">
+           <value>
+             <State>
+Index: src/Interfaces/Shape.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Interfaces/Shape.java b/src/Interfaces/Shape.java
+new file mode 100644
+--- /dev/null	(date 1714678192687)
++++ b/src/Interfaces/Shape.java	(date 1714678192687)
+@@ -0,0 +1,21 @@
++package Interfaces;
++
++import Inheritance.Demo;
++
++public interface Shape {
++    int i=45;
++
++    public abstract void calculated(int r);
++}
++
++class Circle implements Shape{
++    @Override
++    public void calculated(int R) {
++        System.out.println("Area of the circle "+(Math.PI*R*R));
++    }
++
++
++
++}
++
++
+Index: src/Inheritance/Demo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Inheritance;\r\n\r\npublic class Demo {\r\n\r\n    public Demo(){\r\n        System.out.println(\"Demo is creating for this\");\r\n    }\r\n    public static void main(String[] args) {\r\n        Demo demo=new Demo();\r\n        Dog dog=new Dog();\r\n        dog.eating();\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Inheritance/Demo.java b/src/Inheritance/Demo.java
+--- a/src/Inheritance/Demo.java	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
++++ b/src/Inheritance/Demo.java	(date 1714674448114)
+@@ -6,9 +6,9 @@
+         System.out.println("Demo is creating for this");
+     }
+     public static void main(String[] args) {
+-        Demo demo=new Demo();
+         Dog dog=new Dog();
+         dog.eating();
++        dog.speak();
+ 
+     }
+ }
+Index: src/Inheritance/Dog.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Inheritance;\r\n\r\npublic class Dog extends Animal{\r\n\r\n\r\n    public static int  x=12;\r\n    public  Dog(){\r\n        System.out.println(\"Dog is bracking....\");\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Inheritance/Dog.java b/src/Inheritance/Dog.java
+--- a/src/Inheritance/Dog.java	(revision cca79dbd700c80c247605fb33cd66f4bbd64dce2)
++++ b/src/Inheritance/Dog.java	(date 1714674629667)
+@@ -2,9 +2,14 @@
+ 
+ public class Dog extends Animal{
+ 
+-
+-    public static int  x=12;
+-    public  Dog(){
++    public Dog(){
++        super();
++        System.out.println("working now");
++    }
++     int  x=12;
++    public void speak(){
+         System.out.println("Dog is bracking....");
++        System.out.println("Dog Class :"+this.x);
++        System.out.println("Animal class variable "+super.x);
+     }
+ }
+Index: src/MethodOverriding/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/MethodOverriding/Main.java b/src/MethodOverriding/Main.java
+new file mode 100644
+--- /dev/null	(date 1714675353509)
++++ b/src/MethodOverriding/Main.java	(date 1714675353509)
+@@ -0,0 +1,8 @@
++package MethodOverriding;
++
++public class Main {
++    public static void main(String[] args) {
++        child child=new child();
++        child.methodProperty();
++    }
++}
+Index: src/MethodOverriding/Parent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/MethodOverriding/Parent.java b/src/MethodOverriding/Parent.java
+new file mode 100644
+--- /dev/null	(date 1714675451042)
++++ b/src/MethodOverriding/Parent.java	(date 1714675451042)
+@@ -0,0 +1,20 @@
++package MethodOverriding;
++
++public class Parent {
++
++    //Method overridden
++    public void methodProperty(){
++        System.out.println("I am MP() of the Parent");
++    }
++}
++
++class child extends Parent{
++
++    //override Method
++    @Override
++    public void methodProperty() {
++        System.out.println("I am MP() of the Child");
++    }
++}
++
++
